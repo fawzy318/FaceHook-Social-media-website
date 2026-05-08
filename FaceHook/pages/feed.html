@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FaceHook Feed — Share posts, knockout highlights, and connect with boxing fans.">
+  <title>Feed — FaceHook</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/feed.css">
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="FaceHook Logo">
+        <span>Face</span><span class="logo-hook">Hook</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="feed.html" class="active" data-en="Feed" data-ar="المنشورات">Feed</a></li>
+        <li><a href="search.html" data-en="Search" data-ar="بحث">Search</a></li>
+        <li><a href="trending.html" data-en="Trending" data-ar="رائج">Trending</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle">عربي</button>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="nav-hamburger"><span>☰</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE -->
+  <div class="page-wrapper">
+    <div class="feed-layout">
+      <!-- Main Feed -->
+      <main class="feed-main">
+        <!-- Post Creator -->
+        <div class="post-creator">
+          <div class="post-creator-top">
+            <div class="avatar avatar-md full-center" style="background:var(--primary);color:var(--text-inverse);min-width:48px;">You</div>
+            <textarea id="post-textarea" placeholder="What's happening in the ring, champ? 🥊"></textarea>
+          </div>
+          <div class="post-creator-actions">
+            <div class="media-options">
+              <button class="media-btn">📷 <span data-en="Photo" data-ar="صورة">Photo</span></button>
+              <button class="media-btn">🎬 <span data-en="Video" data-ar="فيديو">Video</span></button>
+              <button class="media-btn">📊 <span data-en="Poll" data-ar="استطلاع">Poll</span></button>
+            </div>
+            <button class="btn btn-primary" id="create-post-btn" data-en="Post" data-ar="نشر">Post</button>
+          </div>
+        </div>
+
+        <!-- Posts Feed (rendered by JS) -->
+        <div id="feed-posts"></div>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="feed-sidebar">
+        <!-- Suggested Users -->
+        <div class="sidebar-card">
+          <h3 data-en="🥊 Users to Follow" data-ar="🥊 مستخدمون للمتابعة">🥊 Users to Follow</h3>
+          <div id="suggested-users">
+            <p class="text-muted" style="font-size:0.85rem;">No other users yet. Invite your friends to join!</p>
+          </div>
+        </div>
+
+        <!-- Trending -->
+        <div class="sidebar-card">
+          <h3 data-en="🔥 Trending Topics" data-ar="🔥 مواضيع رائجة">🔥 Trending Topics</h3>
+          <ul style="list-style:none;padding:0;">
+            <li class="mb-md"><a href="trending.html">#TysonVsFury</a><br><small class="text-muted">45.2K posts</small></li>
+            <li class="mb-md"><a href="trending.html">#KnockoutOfTheYear</a><br><small class="text-muted">32.1K posts</small></li>
+            <li class="mb-md"><a href="trending.html">#BoxingTraining</a><br><small class="text-muted">28.7K posts</small></li>
+          </ul>
+          <a href="trending.html" class="btn btn-ghost btn-sm btn-full" data-en="See All Trending" data-ar="عرض الكل">See All Trending</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/feed.js"></script>
+</body>
+</html>

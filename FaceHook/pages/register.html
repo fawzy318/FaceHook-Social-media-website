@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your FaceHook account and join the #1 boxing community.">
+  <title>Register — FaceHook</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="FaceHook Logo">
+        <span>Face</span><span class="logo-hook">Hook</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="feed.html" data-en="Feed" data-ar="المنشورات">Feed</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle">عربي</button>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="nav-hamburger"><span>☰</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- AUTH PAGE -->
+  <div class="page-wrapper">
+    <div class="auth-page">
+      <div class="auth-container animate-fade-in">
+        <div class="auth-card">
+          <!-- Header -->
+          <div class="auth-header">
+            <h1 data-en="Join the Ring" data-ar="انضم للحلبة">Join the Ring</h1>
+            <p data-en="Create your account and step into the boxing community." data-ar="أنشئ حسابك وادخل مجتمع الملاكمة.">Create your account and step into the boxing community.</p>
+          </div>
+
+          <!-- Register Form -->
+          <form class="auth-form" id="register-form" novalidate>
+            <!-- Avatar Upload -->
+            <div class="avatar-upload">
+              <div class="avatar-preview" id="avatar-preview" onclick="document.getElementById('avatar-upload').click()">📷</div>
+              <label for="avatar-upload" data-en="Upload Profile Photo" data-ar="رفع صورة الملف الشخصي">Upload Profile Photo</label>
+              <input type="file" id="avatar-upload" accept="image/*">
+            </div>
+
+            <!-- Name Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name" data-en="First Name" data-ar="الاسم الأول">First Name</label>
+                <input type="text" id="first-name" placeholder="Muhammad">
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label for="last-name" data-en="Last Name" data-ar="اسم العائلة">Last Name</label>
+                <input type="text" id="last-name" placeholder="Ali">
+                <span class="error-message"></span>
+              </div>
+            </div>
+
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username" data-en="Username" data-ar="اسم المستخدم">Username</label>
+                <input type="text" id="username" placeholder="the_greatest">
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                <input type="email" id="email" placeholder="champ@facehook.com">
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password" data-en="Password" data-ar="كلمة المرور">Password</label>
+              <div class="password-wrapper">
+                <input type="password" id="password" placeholder="Min. 8 characters">
+                <button type="button" class="password-toggle">👁️</button>
+              </div>
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirm-password" data-en="Confirm Password" data-ar="تأكيد كلمة المرور">Confirm Password</label>
+              <div class="password-wrapper">
+                <input type="password" id="confirm-password" placeholder="Re-enter password">
+                <button type="button" class="password-toggle">👁️</button>
+              </div>
+              <span class="error-message"></span>
+            </div>
+
+            <!-- Weight Class -->
+            <div class="form-group">
+                <label for="weight-class" data-en="Favorite Weight Class" data-ar="فئة الوزن المفضلة">Favorite Weight Class</label>
+              <select id="weight-class">
+                <option value="">Select weight class...</option>
+                <option value="heavyweight">Heavyweight</option>
+                <option value="middleweight">Middleweight</option>
+                <option value="welterweight">Welterweight</option>
+                <option value="lightweight">Lightweight</option>
+                <option value="featherweight">Featherweight</option>
+                <option value="bantamweight">Bantamweight</option>
+              </select>
+            </div>
+
+            <!-- Bio -->
+            <div class="form-group">
+                <label for="bio" data-en="Short Bio" data-ar="نبذة قصيرة">Short Bio</label>
+              <textarea id="bio" rows="3" placeholder="Tell us about your boxing journey..."></textarea>
+            </div>
+
+            <!-- Terms -->
+            <div class="terms-check">
+              <input type="checkbox" id="terms">
+              <label for="terms">
+                <span data-en="I agree to the" data-ar="أوافق على">I agree to the</span>
+                <a href="#" data-en="Terms & Conditions" data-ar="الشروط والأحكام">Terms & Conditions</a>
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-full btn-lg" data-en="Create Account" data-ar="إنشاء حساب">Create Account</button>
+          </form>
+
+          <!-- Footer -->
+          <div class="auth-footer">
+            <span data-en="Already have an account?" data-ar="لديك حساب بالفعل؟">Already have an account?</span>
+            <a href="login.html" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

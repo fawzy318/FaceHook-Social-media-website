@@ -1,0 +1,66 @@
+/* ============================================
+   FaceHook — Theme Definitions
+   Dark = black + blue, Light = white + blue
+   ============================================ */
+
+/* ---------- Dark Theme ---------- */
+[data-theme="dark"] {
+  --primary: #2196F3;
+  --primary-light: #64B5F6;
+  --primary-dark: #1976D2;
+  --accent: #2196F3;
+  --accent-light: #64B5F6;
+
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --bg-card: #1a1a1a;
+  --bg-elevated: #222222;
+  --bg-input: #1a1a1a;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+  --text-inverse: #000000;
+
+  --border-color: #333333;
+  --border-color-hover: #555555;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.5);
+
+  --gradient-primary: #2196F3;
+  --gradient-accent: #2196F3;
+
+  --navbar-bg: #000000;
+}
+
+/* ---------- Light Theme ---------- */
+[data-theme="light"] {
+  --primary: #1976D2;
+  --primary-light: #2196F3;
+  --primary-dark: #0D47A1;
+  --accent: #1976D2;
+  --accent-light: #2196F3;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-card: #ffffff;
+  --bg-elevated: #eeeeee;
+  --bg-input: #ffffff;
+
+  --text-primary: #000000;
+  --text-secondary: #444444;
+  --text-muted: #888888;
+  --text-inverse: #ffffff;
+
+  --border-color: #dddddd;
+  --border-color-hover: #bbbbbb;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 2px 6px rgba(0,0,0,0.1);
+
+  --gradient-primary: #1976D2;
+  --gradient-accent: #1976D2;
+
+  --navbar-bg: #ffffff;
+}

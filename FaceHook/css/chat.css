@@ -1,0 +1,117 @@
+/* ============================================
+   FaceHook — Chat Page Styles
+   ============================================ */
+
+.chat-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: calc(100vh - var(--navbar-height));
+}
+
+.chat-sidebar {
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+}
+
+.chat-sidebar-header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chat-sidebar-header input {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.chat-contact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chat-contact:hover,
+.chat-contact.active {
+  background: var(--bg-elevated);
+}
+
+.chat-contact .contact-info { flex: 1; }
+.chat-contact .contact-info h5 { font-size: 0.9rem; margin-bottom: 2px; }
+.chat-contact .contact-info span { font-size: 0.75rem; color: var(--text-muted); }
+.chat-contact .contact-time { font-size: 0.7rem; color: var(--text-muted); }
+
+.chat-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.chat-header .chat-user-info h4 { font-size: 1rem; }
+.chat-header .chat-user-info span { font-size: 0.8rem; color: var(--success); }
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.message {
+  max-width: 70%;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background: var(--primary);
+  color: white;
+}
+
+.message.received {
+  align-self: flex-start;
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.message .msg-time {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 4px;
+  display: block;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.chat-input-area input {
+  flex: 1;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+}
+
+@media (max-width: 768px) {
+  .chat-layout { grid-template-columns: 1fr; }
+  .chat-sidebar { display: none; }
+}

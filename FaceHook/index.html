@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="FaceHook — The ultimate social media forum for boxing fans. Connect, share, and discuss everything about the sweet science.">
+  <title>FaceHook — Boxing Social Forum</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="main-navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="FaceHook Logo">
+        <span>Face</span><span class="logo-hook">Hook</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="pages/feed.html" data-en="Feed" data-ar="المنشورات">Feed</a></li>
+        <li><a href="pages/search.html" data-en="Search" data-ar="بحث">Search</a></li>
+        <li><a href="pages/trending.html" data-en="Trending" data-ar="رائج">Trending</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">عربي</button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+          <span>☰</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE WRAPPER -->
+  <div class="page-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero-section">
+      <div class="hero-content">
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <h1>
+            <span data-en="Connect with" data-ar="تواصل مع">Connect with</span><br>
+            <span class="gradient-text" data-en="Boxing Fans Worldwide" data-ar="عشاق الملاكمة حول العالم">Boxing Fans
+              Worldwide</span>
+          </h1>
+          <p data-en="Join FaceHook — the ultimate social platform for boxing enthusiasts. Share fights, discuss techniques, follow champions, and be part of the ring."
+            data-ar="انضم إلى فيس هوك — المنصة الاجتماعية المثالية لعشاق الملاكمة. شارك المباريات، ناقش التقنيات، تابع الأبطال.">
+            Join FaceHook — the ultimate social platform for boxing enthusiasts. Share fights, discuss techniques,
+            follow champions, and be part of the ring.
+          </p>
+          <div class="hero-buttons">
+            <a href="pages/register.html" class="btn btn-primary btn-lg" data-en="Join the Ring"
+              data-ar="انضم للحلبة">Join the Ring</a>
+            <a href="pages/feed.html" class="btn btn-secondary btn-lg" data-en="Explore Feed"
+              data-ar="تصفح المنشورات">Explore Feed</a>
+          </div>
+          <!-- Stats -->
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="stat-number" id="hero-stat-users">0</div>
+              <div class="stat-label" data-en="Members" data-ar="أعضاء">Members</div>
+            </div>
+            <div class="hero-stat">
+              <div class="stat-number" id="hero-stat-posts">0</div>
+              <div class="stat-label" data-en="Posts" data-ar="منشورات">Posts</div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section" id="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-en="Why FaceHook?" data-ar="لماذا فيس هوك؟">Why FaceHook?</h2>
+          <p data-en="Everything a boxing fan needs, in one powerful platform."
+            data-ar="كل ما يحتاجه عشاق الملاكمة في منصة واحدة.">Everything a boxing fan needs, in one powerful platform.
+          </p>
+        </div>
+        <div class="features-grid stagger-children">
+          <div class="card feature-card">
+            <div class="feature-icon">🥊</div>
+            <h3 data-en="Fight Discussions" data-ar="نقاشات المباريات">Fight Discussions</h3>
+            <p data-en="Create threads, debate scorecards, and break down fights round by round with fellow fans."
+              data-ar="أنشئ مواضيع وناقش بطاقات النتائج وحلل المباريات جولة بجولة.">Create threads, debate scorecards,
+              and break down fights round by round with fellow fans.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-icon">📸</div>
+            <h3 data-en="Share & Connect" data-ar="شارك وتواصل">Share & Connect</h3>
+            <p data-en="Post your training clips, share knockout highlights, and connect with boxers worldwide."
+              data-ar="انشر مقاطع تدريبك وشارك لحظات الضربة القاضية وتواصل مع الملاكمين.">Post your training clips,
+              share knockout highlights, and connect with boxers worldwide.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3 data-en="Live Polls & Rankings" data-ar="استطلاعات وتصنيفات">Live Polls & Rankings</h3>
+            <p data-en="Vote on P4P rankings, predict fight outcomes, and see what the community thinks."
+              data-ar="صوت على تصنيفات P4P وتوقع نتائج المباريات.">Vote on P4P rankings, predict fight outcomes, and see
+              what the community thinks.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="feature-icon">💬</div>
+            <h3 data-en="Real-time Chat" data-ar="دردشة مباشرة">Real-time Chat</h3>
+            <p data-en="Chat with other fans during live fights. React, celebrate knockouts, and share the hype."
+              data-ar="تحدث مع المشجعين أثناء المباريات المباشرة.">Chat with other fans during live fights. React,
+              celebrate knockouts, and share the hype.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRENDING PREVIEW -->
+    <section class="trending-section" id="trending-preview">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-en="Trending Now" data-ar="الأكثر رواجاً">Trending Now</h2>
+          <p data-en="Hot topics the boxing world is talking about right now."
+            data-ar="أهم المواضيع في عالم الملاكمة الآن.">Hot topics the boxing world is talking about right now.</p>
+        </div>
+        <div class="trending-list">
+          <div class="trending-item">
+            <span class="trend-rank">01</span>
+            <div class="trend-info">
+              <h4>#TysonVsFury</h4><span>45.2K posts</span>
+            </div>
+          </div>
+          <div class="trending-item">
+            <span class="trend-rank">02</span>
+            <div class="trend-info">
+              <h4>#KnockoutOfTheYear</h4><span>32.1K posts</span>
+            </div>
+          </div>
+          <div class="trending-item">
+            <span class="trend-rank">03</span>
+            <div class="trend-info">
+              <h4>#BoxingTraining</h4><span>28.7K posts</span>
+            </div>
+          </div>
+          <div class="trending-item">
+            <span class="trend-rank">04</span>
+            <div class="trend-info">
+              <h4>#P4PRankings</h4><span>19.4K posts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 data-en="Ready to Step Into the Ring?" data-ar="مستعد لدخول الحلبة؟">Ready to Step Into the Ring?</h2>
+          <p data-en="Join thousands of boxing fans sharing, discussing, and living the sweet science every day."
+            data-ar="انضم إلى آلاف عشاق الملاكمة.">Join thousands of boxing fans sharing, discussing, and living the
+            sweet science every day.</p>
+          <a href="pages/register.html" class="btn btn-primary btn-lg" data-en="Create Free Account"
+            data-ar="إنشاء حساب مجاني">Create Free Account</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="main-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo.png" alt="FaceHook" style="width:32px;height:32px;border-radius:6px;">
+            <span>Face</span><span class="logo-hook">Hook</span>
+          </a>
+          <p data-en="The #1 social platform for boxing fans." data-ar="المنصة الاجتماعية الأولى لعشاق الملاكمة.">The #1
+            social platform for boxing fans.</p>
+        </div>
+        <div>
+          <h4 data-en="Platform" data-ar="المنصة">Platform</h4>
+          <ul>
+            <li><a href="pages/feed.html">Feed</a></li>
+            <li><a href="pages/forum.html">Forum</a></li>
+            <li><a href="pages/trending.html">Trending</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-en="Account" data-ar="الحساب">Account</h4>
+          <ul>
+            <li><a href="pages/login.html">Login</a></li>
+            <li><a href="pages/register.html">Register</a></li>
+            <li><a href="pages/settings.html">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 FaceHook. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- JS -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var stats = getStats();
+      var usersEl = document.getElementById("hero-stat-users");
+      var postsEl = document.getElementById("hero-stat-posts");
+      var threadsEl = document.getElementById("hero-stat-threads");
+      if (usersEl) usersEl.textContent = stats.totalUsers;
+      if (postsEl) postsEl.textContent = stats.totalPosts;
+      if (threadsEl) threadsEl.textContent = stats.totalThreads;
+    });
+  </script>
+</body>
+
+</html>

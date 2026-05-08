@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FaceHook Settings — Privacy, notifications, and language preferences.">
+  <title>Settings — FaceHook</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="FaceHook">
+        <span>Face</span><span class="logo-hook">Hook</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="feed.html">Feed</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle">عربي</button>
+        <button class="theme-toggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <button class="nav-hamburger"><span>☰</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="settings-page">
+      <h1 class="mb-xl" data-en="⚙️ Settings" data-ar="⚙️ الإعدادات">⚙️ Settings</h1>
+
+      <div class="settings-grid">
+        <!-- Settings Nav -->
+        <nav class="settings-nav">
+          <button class="active" onclick="switchSettingsTab('privacy-settings',this)">🔒 Privacy</button>
+          <button onclick="switchSettingsTab('notification-settings',this)">🔔 Notifications</button>
+          <button onclick="switchSettingsTab('appearance-settings',this)">🎨 Appearance</button>
+          <button onclick="switchSettingsTab('language-settings',this)">🌍 Language</button>
+          <button onclick="switchSettingsTab('feedback-settings',this)">📝 Feedback</button>
+          <button onclick="switchSettingsTab('account-settings',this)">👤 Account</button>
+        </nav>
+
+        <!-- Settings Content -->
+        <div>
+          <!-- Privacy Settings -->
+          <div class="settings-section active" id="privacy-settings">
+            <div class="card pad-xl">
+              <h3 class="mb-lg" data-en="🔒 Privacy Settings" data-ar="🔒 إعدادات الخصوصية">🔒 Privacy Settings</h3>
+              <div class="setting-item">
+                <div class="setting-info"><h4>Private Profile</h4><p>Only approved followers can see your posts</p></div>
+                <label class="toggle-switch"><input type="checkbox"><span class="slider"></span></label>
+              </div>
+              <div class="setting-item">
+                <div class="setting-info"><h4>Show Online Status</h4><p>Let others see when you're online</p></div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label>
+              </div>
+              <div class="setting-item">
+                <div class="setting-info"><h4>Allow Messaging</h4><p>Allow non-followers to send you messages</p></div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notification Settings -->
+          <div class="settings-section" id="notification-settings">
+            <div class="card pad-xl">
+              <h3 class="mb-lg">🔔 Notification Preferences</h3>
+              <div class="setting-item">
+                <div class="setting-info"><h4>New Followers</h4><p>Get notified when someone follows you</p></div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label>
+              </div>
+              <div class="setting-item">
+                <div class="setting-info"><h4>Likes on Posts</h4><p>Get notified when someone likes your post</p></div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label>
+              </div>
+              <div class="setting-item">
+                <div class="setting-info"><h4>Fight Alerts</h4><p>Get notified about upcoming boxing events</p></div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appearance Settings -->
+          <div class="settings-section" id="appearance-settings">
+            <div class="card pad-xl">
+              <h3 class="mb-lg">🎨 Appearance</h3>
+              <div class="setting-item">
+                <div class="setting-info"><h4>Dark Mode</h4><p>Switch between dark and light themes</p></div>
+                <button class="theme-toggle" style="border-radius:var(--radius-md);padding:8px 16px;">
+                  <span class="icon-sun">☀️ Light</span>
+                  <span class="icon-moon">🌙 Dark</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language Settings -->
+          <div class="settings-section" id="language-settings">
+            <div class="card pad-xl">
+              <h3 class="mb-lg">🌍 Language</h3>
+              <div class="form-group">
+                <label for="lang-select">Select Language</label>
+                <select id="lang-select" onchange="LangManager.apply(this.value);">
+                  <option value="en">🇬🇧 English</option>
+                  <option value="ar">🇸🇦 العربية (Arabic)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback Form -->
+          <div class="settings-section" id="feedback-settings">
+            <div class="card pad-xl">
+              <h3 class="mb-lg" data-en="📝 Send Feedback" data-ar="📝 إرسال ملاحظات">📝 Send Feedback</h3>
+              <div class="form-group">
+                <label for="feedback-type">Type</label>
+                <select id="feedback-type">
+                  <option value="feedback">💡 General Feedback</option>
+                  <option value="bug">🐛 Bug Report</option>
+                  <option value="complaint">📢 Complaint</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="feedback-subject">Subject</label>
+                <input type="text" id="feedback-subject" placeholder="Brief summary...">
+              </div>
+              <div class="form-group">
+                <label for="feedback-message">Message</label>
+                <textarea id="feedback-message" rows="4" placeholder="Describe your feedback..."></textarea>
+              </div>
+              <button class="btn btn-primary btn-full" onclick="saveFeedbackForm()">Submit Feedback</button>
+            </div>
+          </div>
+
+          <!-- Account Settings -->
+          <div class="settings-section" id="account-settings">
+            <div class="card pad-xl">
+              <h3 class="mb-lg">👤 Account Settings</h3>
+              <div class="form-group">
+                <label for="account-email">Email Address</label>
+                <input type="email" id="account-email" value="">
+              </div>
+              <div class="form-group">
+                <label for="account-username">Username</label>
+                <input type="text" id="account-username" value="">
+              </div>
+              <button class="btn btn-primary mb-xl" onclick="saveAccountSettings()">Save Changes</button>
+              <hr style="border-color:var(--border-color);">
+              <h4 class="text-danger mt-lg mb-md">Danger Zone</h4>
+              <p class="text-muted mb-md" style="font-size:0.85rem;">Permanently delete your account. This cannot be undone.</p>
+              <button class="btn btn-danger" onclick="deleteMyAccount()">🗑️ Delete Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/settings.js"></script>
+</body>
+</html>

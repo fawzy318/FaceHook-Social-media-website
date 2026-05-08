@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FaceHook Advertisements — Promote your boxing brand, gym, or gear.">
+  <title>Advertisements — FaceHook</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="FaceHook">
+        <span>Face</span><span class="logo-hook">Hook</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="feed.html">Feed</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle">عربي</button>
+        <button class="theme-toggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <button class="nav-hamburger"><span>☰</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="container pt-xl pb-3xl">
+      <h1 class="mb-sm" data-en="📢 Advertisements" data-ar="📢 الإعلانات">📢 Advertisements</h1>
+      <p class="text-muted mb-xl">Premium boxing brands and sponsors</p>
+
+      <!-- Featured Ad -->
+      <div class="card pad-xl mb-xl" style="position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--primary);"></div>
+        <span class="badge badge-warning mb-md" style="display:inline-block;">⭐ Featured Sponsor</span>
+        <h2 class="mb-md">🥊 Everlast Pro — Championship Gloves</h2>
+        <p>The same gloves worn by world champions. Premium leather, triple-layer foam padding. Now 40% off for FaceHook members!</p>
+        <div class="flex gap-md mt-md flex-wrap">
+          <button class="btn btn-primary" onclick="Toast.show('Redirecting to Everlast...','info');">Shop Now →</button>
+          <button class="btn btn-ghost" onclick="Toast.show('Ad details saved!','success');">Save for Later</button>
+        </div>
+      </div>
+
+      <!-- Ad Grid -->
+      <h2 class="mb-lg">More Sponsors</h2>
+      <div class="grid gap-lg" style="grid-template-columns:repeat(3,1fr);">
+        <div class="card pad-lg text-center">
+          <div style="font-size:3rem;" class="mb-md">🥊</div>
+          <h3 class="mb-sm" style="font-size:1rem;">RingMaster Gear</h3>
+          <p style="font-size:0.85rem;">Premium boxing equipment for pros and amateurs.</p>
+          <button class="btn btn-secondary btn-sm btn-full mt-md" onclick="Toast.show('Visiting RingMaster...','info');">Visit Store</button>
+        </div>
+        <div class="card pad-lg text-center">
+          <div style="font-size:3rem;" class="mb-md">🏋️</div>
+          <h3 class="mb-sm" style="font-size:1rem;">FightFit Gym</h3>
+          <p style="font-size:0.85rem;">Train with champions. 200+ locations worldwide.</p>
+          <button class="btn btn-secondary btn-sm btn-full mt-md" onclick="Toast.show('Finding nearest gym...','info');">Find a Gym</button>
+        </div>
+        <div class="card pad-lg text-center">
+          <div style="font-size:3rem;" class="mb-md">🎬</div>
+          <h3 class="mb-sm" style="font-size:1rem;">BoxingTV Pro</h3>
+          <p style="font-size:0.85rem;">Stream every fight live. 1 month free trial.</p>
+          <button class="btn btn-secondary btn-sm btn-full mt-md" onclick="Toast.show('Starting free trial...','info');">Start Free Trial</button>
+        </div>
+      </div>
+
+      <!-- Advertise CTA -->
+      <div class="cta-box mt-3xl">
+        <h2>Want to Advertise on FaceHook?</h2>
+        <p>Reach 25K+ boxing fans with targeted ads. Get started today.</p>
+        <button class="btn btn-primary btn-lg" onclick="Toast.show('Contact form opening...','info');">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

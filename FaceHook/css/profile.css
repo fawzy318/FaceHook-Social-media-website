@@ -1,0 +1,144 @@
+/* ============================================
+   FaceHook — Profile Page Styles
+   ============================================ */
+
+/* Cover photo */
+.profile-cover {
+  position: relative;
+  height: 200px;
+  background: var(--primary);
+  overflow: hidden;
+}
+
+.profile-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-cover .cover-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+/* Profile info */
+.profile-info-section {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  position: relative;
+  margin-top: -50px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-details {
+  flex: 1;
+  padding-bottom: var(--space-sm);
+}
+
+.profile-details h1 {
+  font-size: 1.6rem;
+  margin-bottom: 2px;
+}
+
+.profile-details .username {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+}
+
+.profile-details .bio {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  max-width: 450px;
+  margin-bottom: var(--space-sm);
+}
+
+.profile-stats {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.profile-stats .stat { text-align: center; }
+
+.profile-stats .stat-num {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.profile-stats .stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.profile-actions {
+  display: flex;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+/* Profile content */
+.profile-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg) var(--space-2xl);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--space-xl);
+}
+
+/* About sidebar */
+.about-card {
+  padding: var(--space-lg);
+}
+
+.about-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-size: 0.9rem;
+}
+
+.about-item .about-icon {
+  color: var(--primary-light);
+  font-size: 1rem;
+  min-width: 20px;
+}
+
+@media (max-width: 1024px) {
+  .profile-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .profile-cover { height: 150px; }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-actions { justify-content: center; }
+  .profile-stats { justify-content: center; }
+}

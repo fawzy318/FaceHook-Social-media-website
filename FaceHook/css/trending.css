@@ -1,0 +1,89 @@
+/* FaceHook — Trending Page Styles */
+
+.trending-page {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-xl);
+}
+
+.topic-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+  cursor: pointer;
+}
+
+.topic-card:hover {
+  border-color: var(--primary);
+}
+
+.topic-card .topic-rank {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 36px;
+}
+
+.topic-card .topic-info { flex: 1; }
+.topic-card .topic-info h4 { font-size: 1rem; margin-bottom: 2px; }
+.topic-card .topic-info span { font-size: 0.8rem; color: var(--text-muted); }
+
+/* Poll Cards */
+.poll-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.poll-card h3 { margin-bottom: var(--space-lg); }
+
+.poll-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  cursor: pointer;
+}
+
+.poll-option .poll-bar-bg {
+  flex: 1;
+  height: 32px;
+  background: var(--bg-elevated);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.poll-option .poll-bar {
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+
+.poll-option .poll-votes {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  min-width: 50px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .trending-grid { grid-template-columns: 1fr; }
+}

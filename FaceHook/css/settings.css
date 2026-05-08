@@ -1,0 +1,59 @@
+/* FaceHook — Settings Styles */
+
+.settings-page {
+  max-width: var(--container-md);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-xl);
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.settings-nav button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 14px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.settings-nav button:hover,
+.settings-nav button.active {
+  background: rgba(74, 144, 217, 0.1);
+  color: var(--primary-light);
+}
+
+.settings-section { display: none; }
+.settings-section.active { display: block; }
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.setting-item:last-child { border-bottom: none; }
+.setting-info h4 { font-size: 0.95rem; margin-bottom: 2px; }
+.setting-info p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0; }
+
+@media (max-width: 768px) {
+  .settings-grid { grid-template-columns: 1fr; }
+  .settings-nav { flex-direction: row; flex-wrap: wrap; }
+}

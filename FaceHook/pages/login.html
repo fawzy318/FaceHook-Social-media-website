@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to FaceHook — Your boxing social community awaits.">
+  <title>Login — FaceHook</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="FaceHook Logo">
+        <span>Face</span><span class="logo-hook">Hook</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="feed.html" data-en="Feed" data-ar="المنشورات">Feed</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle">عربي</button>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="nav-hamburger"><span>☰</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- AUTH PAGE -->
+  <div class="page-wrapper">
+    <div class="auth-page">
+      <div class="auth-container animate-fade-in">
+        <div class="auth-card">
+          <!-- Header -->
+          <div class="auth-header">
+            <h1 data-en="Welcome Back, Champ!" data-ar="مرحباً بعودتك يا بطل!">Welcome Back, Champ!</h1>
+            <p data-en="Enter the ring. Sign in to your account." data-ar="ادخل الحلبة. سجّل الدخول إلى حسابك.">Enter the ring. Sign in to your account.</p>
+          </div>
+
+          <!-- Login Form -->
+          <form class="auth-form" id="login-form" novalidate>
+            <div class="form-group">
+              <label for="login-email" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+              <input type="email" id="login-email" placeholder="champ@facehook.com" autocomplete="email">
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="login-password" data-en="Password" data-ar="كلمة المرور">Password</label>
+              <div class="password-wrapper">
+                <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password">
+                <button type="button" class="password-toggle" aria-label="Toggle password visibility">👁️</button>
+              </div>
+              <span class="error-message"></span>
+            </div>
+
+            <div class="remember-row">
+              <label class="checkbox-group">
+                <input type="checkbox" id="remember-me">
+                <span data-en="Remember me" data-ar="تذكرني">Remember me</span>
+              </label>
+              <a href="#" class="forgot-link" data-en="Forgot password?" data-ar="نسيت كلمة المرور؟">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg" data-en="Sign In" data-ar="تسجيل الدخول">Sign In</button>
+          </form>
+
+          <!-- Footer -->
+          <div class="auth-footer">
+            <span data-en="Don't have an account?" data-ar="ليس لديك حساب؟">Don't have an account?</span>
+            <a href="register.html" data-en="Join the Ring" data-ar="انضم للحلبة">Join the Ring</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

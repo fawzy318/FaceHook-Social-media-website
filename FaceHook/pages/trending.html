@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trending topics and polls in the boxing world on FaceHook.">
+  <title>Trending — FaceHook</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/trending.css">
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="FaceHook">
+        <span>Face</span><span class="logo-hook">Hook</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="feed.html">Feed</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="trending.html" class="active">Trending</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle">عربي</button>
+        <button class="theme-toggle"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <button class="nav-hamburger"><span>☰</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="trending-page">
+      <h1 class="mb-lg" data-en="🔥 Trending Now" data-ar="🔥 الأكثر رواجاً الآن">🔥 Trending Now</h1>
+
+      <div class="trending-grid">
+        <!-- Main: Topics + Polls -->
+        <div>
+          <h2 class="mb-lg" data-en="Hot Topics" data-ar="مواضيع ساخنة">Hot Topics</h2>
+          <div class="stagger-children">
+            <div class="topic-card">
+              <span class="topic-rank">01</span>
+              <div class="topic-info"><h4>#TysonVsFury</h4><span>45.2K posts · Boxing Event</span></div>
+              <span class="badge badge-danger">🔥 Hot</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-rank">02</span>
+              <div class="topic-info"><h4>#KnockoutOfTheYear</h4><span>32.1K posts · Highlights</span></div>
+              <span class="badge badge-warning">📈 Rising</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-rank">03</span>
+              <div class="topic-info"><h4>#BoxingTraining</h4><span>28.7K posts · Training</span></div>
+              <span class="badge badge-success">💪 Active</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-rank">04</span>
+              <div class="topic-info"><h4>#P4PRankings</h4><span>19.4K posts · Rankings</span></div>
+              <span class="badge badge-primary">📊</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-rank">05</span>
+              <div class="topic-info"><h4>#WomensBoxing</h4><span>12.3K posts · Women's Division</span></div>
+              <span class="badge badge-primary">👑</span>
+            </div>
+          </div>
+
+          <!-- Polls Section -->
+          <h2 class="mt-2xl mb-lg" data-en="📊 Live Polls" data-ar="📊 استطلاعات مباشرة">📊 Live Polls</h2>
+          <div id="polls-container"></div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <!-- Top Contributors -->
+          <div class="card pad-xl mb-lg">
+            <h3 class="mb-lg" data-en="🏆 Top Contributors" data-ar="🏆 أبرز المساهمين">🏆 Top Contributors</h3>
+            <div class="flex flex-col gap-sm">
+              <div class="flex items-center gap-sm">
+                <span>🥇</span>
+                <div><strong>Iron Mike</strong><br><small class="text-muted">342 posts this week</small></div>
+              </div>
+              <div class="flex items-center gap-sm">
+                <span>🥈</span>
+                <div><strong>Ring Analyst</strong><br><small class="text-muted">289 posts this week</small></div>
+              </div>
+              <div class="flex items-center gap-sm">
+                <span>🥉</span>
+                <div><strong>Coach Rodriguez</strong><br><small class="text-muted">201 posts this week</small></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Fights -->
+          <div class="card pad-xl">
+            <h3 class="mb-lg" data-en="📅 Upcoming Fights" data-ar="📅 المباريات القادمة">📅 Upcoming Fights</h3>
+            <div class="flex flex-col gap-md">
+              <div class="pad-lg" style="background:var(--bg-elevated);border-radius:var(--radius-md);">
+                <strong>Crawford vs Spence 2</strong><br>
+                <small class="text-muted">June 15, 2026 · Las Vegas</small>
+              </div>
+              <div class="pad-lg" style="background:var(--bg-elevated);border-radius:var(--radius-md);">
+                <strong>Inoue vs Nery</strong><br>
+                <small class="text-muted">July 8, 2026 · Tokyo</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CREATE POLL MODAL -->
+  <div class="modal-overlay" id="create-poll-modal">
+    <div class="modal">
+      <div class="modal-header"><h3>Create New Poll</h3><button class="modal-close">&times;</button></div>
+      <div class="form-group">
+        <label for="poll-question">Question</label>
+        <input type="text" id="poll-question" placeholder="e.g., Who is the best heavyweight of all time?">
+      </div>
+      <div class="form-group">
+        <label for="poll-opt-1">Option 1 *</label>
+        <input type="text" id="poll-opt-1" placeholder="Option 1">
+      </div>
+      <div class="form-group">
+        <label for="poll-opt-2">Option 2 *</label>
+        <input type="text" id="poll-opt-2" placeholder="Option 2">
+      </div>
+      <div class="form-group">
+        <label for="poll-opt-3">Option 3 (optional)</label>
+        <input type="text" id="poll-opt-3" placeholder="Option 3">
+      </div>
+      <div class="form-group">
+        <label for="poll-opt-4">Option 4 (optional)</label>
+        <input type="text" id="poll-opt-4" placeholder="Option 4">
+      </div>
+      <button class="btn btn-primary btn-full" onclick="submitNewPoll()">Create Poll</button>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/trending.js"></script>
+  <script src="../js/polls.js"></script>
+</body>
+</html>
